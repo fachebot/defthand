@@ -24,7 +24,6 @@ import { ERC20, Router02 } from "./abi"
     const router = new ethers.Contract(UNISWAPV2_ROUTER as string, Router02, wallet)
 
     const path = [WETH as string, TOKEN as string]
-    const deadline = Math.floor(Date.now() / 1000) + 60 * 5
     const options = { value: ethers.parseEther(VALUE as string) }
 
     const value = new BigNumber(VALUE as string)
@@ -34,6 +33,7 @@ import { ERC20, Router02 } from "./abi"
 
     while (true) {
         try {
+            const deadline = Math.floor(Date.now() / 1000) + 60 * 5
             const tx = await router.swapExactETHForTokens(amountOutMin, path, address, deadline, options)
             console.info(tx.hash)
             break
