@@ -37,8 +37,8 @@ import { ERC20, Router02 } from "./abi"
             const tx = await router.swapExactETHForTokens(amountOutMin, path, address, deadline, options)
             console.info(tx.hash)
             break
-        } catch (error) {
-            console.info("waiting...")
+        } catch (error: any) {
+            console.info(error.message)
         }
     }
 })()
