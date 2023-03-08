@@ -38,7 +38,7 @@ import { ERC20, Router02 } from "./abi"
             console.info(tx.hash)
             break
         } catch (error: any) {
-            console.info(error.message)
+            console.info(new Date(), error.message)
         }
     }
 })()
