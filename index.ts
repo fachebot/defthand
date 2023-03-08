@@ -1,6 +1,6 @@
 import dotenv from "dotenv"
 import { ethers } from "ethers"
-import BigNumber from "bignumber.js";
+import BigNumber from "bignumber.js"
 
 import { ERC20, Router02 } from "./abi"
 
