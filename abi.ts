@@ -957,6 +957,11 @@ export const Router02 = [
                 "type": "address"
             },
             {
+                "internalType": "address",
+                "name": "referrer",
+                "type": "address"
+            },
+            {
                 "internalType": "uint256",
                 "name": "deadline",
                 "type": "uint256"
@@ -1010,11 +1015,6 @@ export const Router02 = [
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "amountIn",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
                 "name": "amountOutMin",
                 "type": "uint256"
             },
@@ -1026,6 +1026,11 @@ export const Router02 = [
             {
                 "internalType": "address",
                 "name": "to",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "referrer",
                 "type": "address"
             },
             {
